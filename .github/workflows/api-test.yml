@@ -33,4 +33,5 @@ jobs:
       run: |
         newman run Postman/CalculatorFastApi.collection.json \
         -e Postman/Calculator.environment.json \
-        --reporters cli
+        -r cli,html \
+    	--reporter-html-export report.html
