@@ -22,7 +22,7 @@ def calculate(data: CalculatorRequest):
             raise HTTPException(status_code=400, detail="Division by zero not allowed")
         result = data.a / data.b
     else:
-        raise HTTPException(status_code=400, detail="Invalid operation perform")
+        raise HTTPException(status_code=400, detail="Invalid operation")
 
     return {"result": result}
 
